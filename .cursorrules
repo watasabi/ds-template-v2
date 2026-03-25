@@ -1,0 +1,40 @@
+Cursor Rules - ds-template-v2
+
+## CRITICAL: Always Follow These Rules
+
+1. **READ AGENT.md FIRST** - Before making any changes, read `AGENT.md` for project conventions.
+2. **PACKAGE NAME** - The template package is `ds-template-v2`.
+3. **FOLLOW THE PATTERNS** - This is a Cookiecutter template. Files inside `{{cookiecutter.project_slug}}/` use Jinja2 template syntax.
+
+## Code Style
+
+- Python 3.12+ syntax
+- Type hints on ALL functions
+- Docstrings for public APIs
+- Line length: 79 chars
+- Use `ruff` for linting/formatting
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+ignore = ['E402', 'F811']
+
+## Template Rules
+
+- Template variables: `{{ cookiecutter.variable_name }}`
+- Hooks are in `hooks/` directory
+- Extensions are in `local_extensions.py`
+
+## Don'ts
+
+- DON'T hallucinate directories not in the project tree.
+- DON'T use raw strings where template variables should be.
+
+## Commands Reference
+
+- Format: `uv run ruff format .`
+- Lint: `uv run ruff check .`
+- Test: `uv run pytest tests/`

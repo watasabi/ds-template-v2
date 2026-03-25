@@ -1,0 +1,17 @@
+{
+  "project_name": "Project Name",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_desc": "A short description of the project.",
+  "python_version": ["3.12", "3.14", "3.13", "3.11", "3.10", "3.9"],
+
+  "_extensions": ["local_extensions.LocalExtension"],
+
+  "full_name": "{{ get_git_user_name() }}",
+  "email": "{{ get_git_user_email() }}",
+
+  "git_remote_url": "",
+
+  "create_pipeline": true,
+  "use_git": true,
+  "init_uv": true
+}
