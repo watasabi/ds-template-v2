@@ -1,6 +1,6 @@
 # ds-template-v2
 
-Template cookiecutter para projetos de Data Science da 
+Template cookiecutter para projetos de Data Science.
 
 ## Funcionalidades
 
